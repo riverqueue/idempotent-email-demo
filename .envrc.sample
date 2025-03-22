@@ -1,0 +1,3 @@
+# Common configuration amongst all developers, committed to Git. Customize env
+# vars below this line.
+source_env_if_exists .envrc.local
