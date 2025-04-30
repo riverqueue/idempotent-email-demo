@@ -122,8 +122,8 @@ type SendEmailWorker struct {
 }
 
 func (w *SendEmailWorker) Work(ctx context.Context, job *river.Job[SendEmailArgs]) error {
-	// This will probably too simple to work in reality, but is here to
-	// demonstrate the basic shape of what sending an email would look like.
+	// This is too simple to work in reality, but is here to demonstrate the
+	// basic shape of what sending an email would look like.
 	var (
 		auth    = smtp.PlainAuth("", w.smtpUser, w.smtpPass, w.smtpHost)
 		message = []byte(fmt.Sprintf("To: %s\r\n"+
